@@ -1,0 +1,16 @@
+.MuiButtonBase-root.MuiButton-root{
+    @extend .btn;
+
+    &.MuiButton-containedPrimary{
+        @extend .btn-primary;
+    }
+
+    &.MuiButton-outlined
+    {
+        @extend .btn-outline-secondary;
+    }
+
+    .MuiTouchRipple-root{
+        display: none;
+    }
+}

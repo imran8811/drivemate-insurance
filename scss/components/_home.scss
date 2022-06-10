@@ -1,0 +1,135 @@
+.home-banner {
+    width: 100%;
+    display: inline-block;
+    margin: 70px 0 70px 0;
+
+    .title {
+        @extend .title1;
+        font-family: $font-family-base-700;
+        font-size: 35px;
+        width: 100%;
+        display: block;
+        clear: both;
+        line-height: 48px;
+        margin: 50px 0 40px 0;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        color: $gray-650;
+        margin-top: -150px;
+        width: 67%;
+    }
+
+    img {
+        max-width: 100%;
+    }
+}
+
+.home-services {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 70px;
+
+    .home-services-detail {
+        width: 100%;
+        display: inline-block;
+        margin-bottom: 40px;
+    }
+
+    img {
+        height: 120px;
+    }
+    .title {
+        @extend .title3;
+        font-family: $font-family-base-700;
+        width: 100%;
+        display: block;
+        margin: 24px 0 16px 0;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 24px;
+        color: $gray-650;
+    }
+}
+
+@media (max-width: 1034px) {
+    .home-banner {
+        p {
+            margin-top: -90px;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .home-banner {
+        p {
+            margin-top: -60px;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    .home-banner {
+        p {
+            margin-top: 0;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 890px) {
+    .home-banner {
+        .title {
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .home-banner {
+        margin: 25px 0 25px 0;
+        img {
+            max-height: 365px;
+            width: auto;
+            margin: auto;
+            display: block;
+        }
+    }
+    .home-services {
+        margin-bottom: 25px;
+    }
+}
+
+@media (max-width: 575px) {
+    .home-banner {
+        .title {
+            font-size: 18px;
+            line-height: 24px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .home-services {
+        img {
+            height: 80px;
+        }
+        .title {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+}

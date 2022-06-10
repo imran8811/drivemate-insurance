@@ -1,0 +1,30 @@
+.price {
+    line-height: normal;
+    .currency {
+        font-family: $font-family-base-700;
+        font-size: 12px;
+        color: $black;
+        text-transform: uppercase;
+        margin-right: 3px;
+    }
+    .total {
+        font-family: $font-family-base-700;
+        font-size: 16px;
+        color: $primary;
+    }
+    .disc {
+        font-size: 12px;
+        width: 100%;
+        display: block;
+        color: $gray-650;
+        text-decoration: line-through;
+    }
+    &.lg {
+        .currency {
+            font-size: 14px;
+        }
+        .total {
+            font-size: 24px;
+        }
+    }
+}

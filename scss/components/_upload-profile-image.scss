@@ -1,0 +1,39 @@
+.upload-profile-image {
+
+    .form-control {
+        padding: 0;
+        border: 0 solid transparent;
+        width: 120px;
+        height: 120px;
+        border-radius: 120px;
+        margin: -120px auto 0 auto;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .thumb {
+        background-color: $gray-250;
+        background-image: url("../images/camera-icon.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        overflow: hidden;
+        display: flex;
+        margin: auto;
+        vertical-align: middle;
+        width: 120px;
+        height: 120px;
+        border: 1px solid $gray-250;
+        border-radius: 120px;
+        cursor: pointer;
+        text-align: center;
+
+        img{
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 120px;
+            margin: auto;
+            display: table;
+        }
+    }
+}

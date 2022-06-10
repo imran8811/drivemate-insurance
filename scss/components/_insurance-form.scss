@@ -1,0 +1,16 @@
+.insurance-form{
+    .title{
+        @extend .title3;
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid $gray-225;
+
+        .btn{
+            float: left;
+            margin-right: 15px;
+            padding: 3px 5px 0 0;
+            height: auto;
+            line-height: normal;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.btn-default {
+  border-style: solid !important;
+  border-width: 1px !important;
+}
+
+.btn-dm-lg {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.btn-dm-md {
+  padding: 10px 20px !important;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  font-family: $font-family-base;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 0 0 $white !important;
+  text-shadow: 0 0 0;
+  max-width: 100%;
+
+  &:hover {
+    box-shadow: 0 0 0 $white !important;
+    text-shadow: 0 0 0;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 $white !important;
+    text-shadow: 0 0 0;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 $white !important;
+    text-shadow: 0 0 0;
+  }
+}
+
+.button {
+  box-shadow: 0 0 0 $white !important;
+  text-shadow: 0 0 0;
+
+  &:hover {
+    box-shadow: 0 0 0 $white !important;
+    text-shadow: 0 0 0;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 $white !important;
+    text-shadow: 0 0 0;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 $white !important;
+    text-shadow: 0 0 0;
+  }
+}
+
+.btn-disabled{
+  background-color: $gray-225;
+  color: $gray-550;
+  border-color: $gray-225;
+}
+
+.btn-primary {
+  color: $white;
+  &[aria-expanded="true"],
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: darken($primary, 18%);
+    border-color: darken($primary, 18%);
+    color: $white;
+  }
+  &:disabled{
+    @extend .btn-disabled;
+  }
+}
+
+.btn-outline-secondary {
+  color: $black;
+  &[aria-expanded="true"],
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    background-color: $gray-850;
+    color: $white;
+    border-color: $gray-550;
+  }
+  &:disabled{
+    @extend .btn-disabled;
+  }
+}
+
+.button-facebook,
+.button-facebook:hover,
+.button-facebook:focus {
+  background: $fb;
+  color: $white;
+}

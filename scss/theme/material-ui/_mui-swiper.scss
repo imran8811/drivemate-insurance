@@ -1,0 +1,99 @@
+.swiper-container {
+    border-radius: $card-border-radius;
+
+    .swiper-slide {
+        margin-right: 16px !important;
+        width: auto !important;
+    }
+}
+
+.brand-section-wrap {
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: relative;
+        top: 0;
+        width: auto;
+        height: 100%;
+        margin-top: 0;
+        padding: 0 12px;
+        transition: all 0.3s;
+        float: left;
+
+        &::after {
+            width: 48px;
+            height: 48px;
+            display: table;
+            padding-top: 13px;
+            margin-top: -23px;
+            text-align: center;
+            color: $gray-550;
+            border-radius: 48px;
+            font-size: 20px;
+            transition: all 0.3s;
+            border: 1px solid $gray-400;
+        }
+
+        &:hover {
+            &::after {
+                color: $white;
+                background-color: rgba($black, 0.1);
+            }
+        }
+
+        &.swiper-button-disabled {
+            opacity: 1;
+
+            &::after {
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .swiper-button-next {
+        right: -10px;
+
+        &::after {
+            padding-left: 3px;
+        }
+    }
+
+    .swiper-button-prev {
+        left: -10px;
+
+        &::after {
+            padding-right: 3px;
+        }
+    }
+
+    &:hover {
+        .swiper-button-next,
+        .swiper-button-prev {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: initial;
+        }
+    }
+
+    &.lg {
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 70px;
+        }
+    }
+
+    &.sm {
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: 22px;
+        }
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .brand-section-wrap {
+        .swiper-button-next,
+        .swiper-button-prev {
+            display: none;
+        }
+    }
+}

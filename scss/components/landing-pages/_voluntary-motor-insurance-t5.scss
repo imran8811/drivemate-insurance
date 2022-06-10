@@ -1,0 +1,422 @@
+.voluntary-motor-insurance-t5-wrap {
+    .banner {
+        background: url("../images/landing-pages/voluntary-t5/voluntary-t5-bg-banner.svg") no-repeat top center;
+        background-size: 110%;
+        transition: all 1s;
+        padding: 100px 0;
+        display: flex;
+        width: 100%;
+        vertical-align: middle;
+
+        .bg {
+            background: url("../images/landing-pages/voluntary-t5/voluntary-t5-text-bg-insurance.svg") no-repeat;
+            background-size: 65%;
+            background-position-x: center;
+            background-position-y: 50%;
+            width: 100%;
+            max-width: 1400px;
+            display: table;
+            margin: auto;
+            transition: all 0.5s;
+
+            img {
+                max-width: 100%;
+                transition: all 0.7s;
+
+                &.lg-1, &.lg-2, &.sm {
+                    filter: grayscale(50%);
+                }
+
+                &.sm {
+                    float: right;
+                    border-radius: 100%;
+                }
+            }
+
+            .title1, small {
+                max-width: 558px;
+                display: inline-block;
+                margin: 0 auto 24px auto;
+                transition: all 0.3s;
+            }
+
+            .title1 {
+                font-family: $font-family-base-700;
+            }
+
+            .media {
+                max-width: 260px;
+                padding: 12px 25px;
+                margin: 40px 10% 0 0;
+                float: right;
+                background-color: rgba($white, 0.6);
+                border-radius: 35px;
+                transition: all 1.3s;
+
+                img {
+                    float: left;
+                    margin-right: 20px;
+                }
+
+                .media-body {
+                    @extend .title4;
+                    text-align: left;
+                }
+            }
+        }
+
+        &:hover {
+            background: url("../images/landing-pages/voluntary-t5/voluntary-t5-bg-banner-2.png") no-repeat top center;
+            background-size: 100%;
+
+            .bg {
+                background: url("../images/landing-pages/voluntary-t5/voluntary-t5-text-bg-insurance-2.png") no-repeat;
+                background-size: 60%;
+                background-position-x: center;
+                background-position-y: 50%;
+
+                .title1, small {
+                    max-width: 590px;
+                }
+
+                .title1 {
+                    font-size: 38px;
+                }
+                small {
+                    font-size: 13px;
+                }
+
+                img {
+                    &.lg-1, &.lg-2, &.sm {
+                        filter: grayscale(0%);
+                    }
+                    &.lg-1 {
+                        margin-top: 20px;
+                    }
+                    &.sm {
+                        box-shadow: -10px 20px 20px rgba($black, 0.15);
+                    }
+                    &.lg-2 {
+                        margin-top: -20px;
+                    }
+                }
+
+                .media {
+                    box-shadow: -44px 27px 43px rgba($black, 0.15);
+                }
+            }
+        }
+    }
+
+    .type {
+        .title1,
+        .title2 {
+            width: 100%;
+            display: block;
+        }
+        .title1,
+        p {
+            margin-bottom: 24px;
+        }
+
+        &.type-1 {
+            .title2 {
+                margin-top: 75px;
+            }
+            .text-card {
+                &.a {
+                    float: right;
+                    margin-right: 145px;
+                }
+                &.b {
+                    float: right;
+                }
+                &.c {
+                    float: left;
+                }
+                &.d {
+                    margin: 10px auto 0 150px;
+                }
+            }
+        }
+
+        &.type-2 {
+            .title2 {
+                margin-top: 25px;
+            }
+            .text-card {
+                &.a {
+                    margin-left: 20px;
+                }
+                &.b {
+                    margin-left: 100px;
+                }
+            }
+        }
+
+        &.type-3 {
+            .text-card {
+                &.a,
+                &.b {
+                    float: right;
+                }
+                &.a {
+                    margin-right: 150px;
+                }
+                &.b {
+                    margin-right: 100px;
+                }
+            }
+        }
+
+        &.type-4 {
+            .title2 {
+                margin-top: 50px;
+            }
+            .bg {
+                background-color: $white;
+                position: relative;
+                width: 170%;
+                height: 400px;
+                left: -401px;
+                border-radius: 0px 30px 30px 0px;
+            }
+            img {
+                position: relative;
+                margin-top: -345px;
+                max-width: 100%;
+            }
+        }
+
+        &.type-5 {
+            .title2 {
+                margin-top: 150px;
+                margin-bottom: 24px;
+            }
+            .text-card {
+                margin: auto;
+                display: table;
+                max-width: 100%;
+                &.b {
+                    margin-top: 100px;
+                }
+            }
+
+            ol {
+                margin: 24px 0 0 0;
+                padding-left: 17px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .voluntary-motor-insurance-t5-wrap {
+        .banner {
+            height: 89vh;
+            padding: 0;
+        }
+    }
+}
+@media (max-width: 992px) {
+    .voluntary-motor-insurance-t5-wrap {
+        .banner {
+            background-size: cover;
+            height: auto;
+            padding: 50px 0;
+
+            .bg {
+                background-size: 60%;
+
+                .title1, small {
+                    max-width: 590px;
+                }
+
+                .title1 {
+                    font-size: 38px;
+                }
+                small {
+                    font-size: 13px;
+                }
+
+                img {
+                    &.lg-1, &.lg-2, &.sm {
+                        filter: grayscale(0%);
+                    }
+                    &.lg-1 {
+                        margin-top: 20px;
+                    }
+                    &.sm {
+                        box-shadow: -10px 20px 20px rgba($black, 0.15);
+                    }
+                    &.lg-2 {
+                        margin-top: -20px;
+                    }
+                }
+
+                .media {
+                    box-shadow: -44px 27px 43px rgba($black, 0.15);
+                }
+            }
+
+            &:hover{
+                background-size: cover;
+            }
+        }
+        .type {
+            .btn{
+                margin-bottom: 40px;
+            }
+
+            &.type-1, &.type-2 , &.type-3{
+                .text-card{
+                    &.a, &.b, &.c, &.d{
+                        margin: auto;
+                        display: table;
+                        float: none;
+                    }
+                }
+            }
+
+            &.type-2, &.type-3
+            {
+                .text-card{
+                    &.b{
+                        float: right;
+                    }
+                }
+            }
+
+            &.type-4 {
+                .title2{
+                    margin-top: 0;
+                }
+                .bg {
+                    left: -12px;
+                    width: 75%;
+                }
+                img {
+                    float: right;
+                    margin-right: 116px;
+                }
+            }
+
+            &.type-5 {
+                .title2{
+                    margin-top: 0;
+                }
+                ol{
+                    margin-bottom: 50px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .voluntary-motor-insurance-t5-wrap {
+        .type {
+            .title2{
+                margin-top: 0 !important;
+            }
+            &.type-2, &.type-3
+            {
+                .text-card{
+                    &.b{
+                        margin-right: 20%;
+                    }
+                }
+            }
+            &.type-4{
+                .bg{
+                    height: 250px;
+                }
+                img{
+                    height: 273px;
+                    margin-top: -230px;
+                    margin-right: 10%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .voluntary-motor-insurance-t5-wrap {
+        .banner, .banner:hover {
+            .bg{
+                background-size: 110%;
+                background-position: center;
+
+                .title1 {
+                    font-size: 36px;
+                }
+                small {
+                    font-size: 14px;
+                }
+
+                img{
+                    &.lg-1{
+                        margin-top: 0;
+                        width: 165px;
+                    }
+                    &.lg-1{
+                        width: 165px;
+                    }
+                    &.lg-2{
+                        margin-top: 80px;
+                        width: 175px;
+                    }
+                    &.sm{
+                        display: none;
+                    }
+                }
+                .media{
+                    position: absolute;
+                    z-index: 100;
+                    margin-top: 95px;
+                }
+            }
+        }
+        .type {
+            .title1{
+                font-size: 24px;
+            }
+            .title2{
+                font-size: 18px;
+            }
+            &.type-1 {
+                .text-card{
+                    &.a, &.c{
+                        margin: 0;
+                        float: left;
+                    }
+                    &.b, &.d{
+                        margin: 0;
+                        float: right;
+                    }
+                }
+            }
+            &.type-2, &.type-3
+            {
+                .text-card{
+                    &.b{
+                        margin-right: 0;
+                    }
+                }
+            }
+            &.type-4 {
+                img{
+                    margin-right: 0;
+                }
+            }
+            &.type-5 {
+                .text-card {
+                    &.b{
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}

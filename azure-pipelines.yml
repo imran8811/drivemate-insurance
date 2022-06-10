@@ -1,0 +1,123 @@
+name: $(TeamProject)_$(Build.DefinitionName)_$(SourceBranchName)_$(Build.BuildId)$(Rev:.r)
+
+trigger:
+  branches:
+    include:
+      - develop
+      - release/*
+      - sprint/*
+      - app-update-1
+
+resources:
+  repositories:
+    - repository: DriveMateTemplate
+      type: git
+      name: OTOZ/devops
+      ref: refs/heads/master
+
+pool:
+  vmImage: "ubuntu-latest"
+
+variables:
+  - template: pipeline/DM/global-variables.yml@DriveMateTemplate
+  - name: dockerfilePath
+    value: "Dockerfile"
+  - name: packageFilePath
+    value: package.json
+
+stages:
+  - stage: Build
+    variables:
+      - group: CommonBuildVariables
+    jobs:
+      - template: pipeline/DM/pull-request-job.yml@DriveMateTemplate
+        parameters:
+          dockerfilePath: $(dockerfilePath)
+          workingDirectory: ''
+      - template: pipeline/DM/build-job.yml@DriveMateTemplate
+        parameters:
+          dockerfilePath: $(dockerfilePath)
+          packageFilePath: $(packageFilePath)
+
+  - stage: Dev
+    displayName: Dev Environment
+    condition: and(succeeded(), eq(variables.isDevelop, true))
+    variables:
+      - group: DevReleaseCommon
+    jobs:
+      - template: pipeline/DM/deployment-job-h3.yml@DriveMateTemplate
+        parameters:
+          deploymentName: Deploy_to_Dev
+          displayName: "Dev Deployment"
+          environment_name: "Dev Environment"
+          subscription: $(azure_OTOZ_Subscription_Connection)
+
+  - stage: QA
+    displayName: QA Environment
+    dependsOn: Dev
+    condition: succeeded('Dev')
+    variables:
+      - group: SysTestReleaseCommon
+    jobs:
+      - template: pipeline/DM/deployment-job-h3.yml@DriveMateTemplate
+        parameters:
+          deploymentName: Deploy_to_QA
+          displayName: "QA Deployment"
+          environment_name: "QA Environment"
+          subscription: $(azure_OTOZ_Subscription_Connection)
+
+  - stage: Staging
+    displayName: Staging Deployment
+    dependsOn: Build
+    condition: and(succeeded(), eq(variables.isStaging, true))
+    variables:
+      - group: StageReleaseCommon
+    jobs:
+      - template: pipeline/DM/deployment-job.yml@DriveMateTemplate
+        parameters:
+          deploymentName: Deploy_to_Staging
+          displayName: "Staging Deployment"
+          environment_name: "Staging Environment"
+          subscription: $(azure_OTOZ_Subscription_Connection)
+
+  - stage: Demo
+    displayName: Demo Deployment
+    dependsOn: Build
+    condition: and(succeeded(), eq(variables.isDemo, true))
+    variables:
+      - group: DemoReleaseCommon
+    jobs:
+      - template: pipeline/DM/deployment-job.yml@DriveMateTemplate
+        parameters:
+          deploymentName: Deploy_to_Demo
+          displayName: "Demo Deployment"
+          environment_name: "Demo Environment"
+          subscription: $(azure_OTOZ_Subscription_Connection)
+
+  - stage: PreProd
+    displayName: PreProd Deployment
+    dependsOn: Build
+    condition: and(succeeded(), eq(variables.isProd, true))
+    variables:
+      - group: PreProdCommonRelease
+    jobs:
+      - template: pipeline/DM/deployment-job.yml@DriveMateTemplate
+        parameters:
+          deploymentName: Deploy_to_PreProd
+          displayName: "PreProd Deployment"
+          environment_name: "PreProd Environment"
+          subscription: $(azure_DM_Subscription_Connection)
+
+  - stage: Production
+    displayName: Production Environment
+    dependsOn: Staging
+    condition: succeeded('Staging')
+    variables:
+      - group: ProdReleaseCommon
+    jobs:
+      - template: pipeline/DM/deployment-job.yml@DriveMateTemplate
+        parameters:
+          deploymentName: Deploy_to_Production
+          displayName: "Production Deployment"
+          environment_name: "Production Environment"
+          subscription: $(azure_DM_Subscription_Connection)

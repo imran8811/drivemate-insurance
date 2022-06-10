@@ -1,0 +1,80 @@
+.dropdown-menu {
+    box-shadow: $dropdown-box-shadow;
+    .dropdown-item {
+        border-radius: $dropdown-inner-border-radius;
+        font-family: $font-family-base;
+        transition: all 0.3s;
+    }
+
+    .dropdown-header{
+        @extend .title3;
+        width: 100%;
+        display: inline-block;
+        padding: $grid-gutter-width;
+        text-align: center;
+        border-bottom: 1px solid  $gray-225;
+
+        .btn-close{
+            @extend .btn;
+            background: url("../images/cross-icon.svg") no-repeat center 100%;
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            position: absolute;
+            right: 15px;
+            top: 24px;
+            padding: 5px;
+        }
+    }    
+
+    .dropdown-body {
+        padding: 24px;
+        
+        &.max-height{
+            max-height: 321px;
+            overflow-y: scroll;
+            @extend .custom-scrollbar;
+        }
+        
+        .form-group {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .dropdown-footer {
+        border-top: 1px solid $gray-225;
+        padding: 16px 20px;
+    }
+}
+.dropdown-toggle{
+    &::after {
+        content: url("../images/down-arrow.svg");
+        position: absolute;
+        margin: -2px 0 0 7px;
+        border: 0 solid transparent;
+        vertical-align: initial;
+        opacity: 0.3;
+    }
+}
+
+.dropdown-menu-end{
+    right: 0;
+}
+
+.dropdown-bottom-fixed{
+    max-width: 100%;
+    min-width: 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: $dropdown-border-radius $dropdown-border-radius 0 0;
+
+    .dropdown-body{
+        @extend .custom-scrollbar;
+        overflow-y: auto;
+        max-height: 57vh;
+    }
+}

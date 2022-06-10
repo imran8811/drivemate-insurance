@@ -1,0 +1,55 @@
+.MuiAccordion-root {
+    box-shadow: 0 0 0 transparent !important;  
+    .MuiAccordionSummary-root {
+        padding: 0 0 20px 0;
+        min-height: 0 !important;
+        .icon{
+            background: url("../images/down-arrow.svg") no-repeat center 100%;
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            opacity: 0.3;
+            transform: rotate(-180deg);
+        }
+        .MuiAccordionSummary-content{
+            margin: 0;
+            &.Mui-expanded {
+                margin: 0;
+            }
+        }
+        &.Mui-expanded {
+            min-height: 0;
+            .icon{
+                top: 5px;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+    }
+    &::before {
+        display: none;
+    }
+    &.MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded.Mui-expanded {
+        position: relative;
+        width: 100%;
+        min-width: 0 !important;
+        box-shadow: 0 0 0 transparent !important;
+        left: 0;
+        border-radius: 0 !important;
+        border: 0 solid transparent;
+
+        &::before {
+            display: none;
+        }
+    }
+    .MuiCollapse-wrapper {
+        .MuiAccordionDetails-root {
+            padding: 0;
+            display: inline-block;
+            width: 100%;
+        }
+    }
+}

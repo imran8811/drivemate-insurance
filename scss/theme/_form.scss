@@ -1,0 +1,129 @@
+.form-group {
+    margin-bottom: 16px;
+
+    label {
+        font-family: $font-family-base-600;
+        font-size: 12px;
+        color: $black;
+        margin-bottom: 8px;
+    }
+
+    &.disabled{
+        opacity: 0.5;
+        cursor: not-allowed;
+
+        input, select, textarea{
+            pointer-events: none;
+        }
+    }
+}
+
+.optional-text{
+    width: 100%;
+    display: block;
+    margin-top: $form-feedback-margin-top;
+    font-size: $form-feedback-font-size;
+    color: $gray-650;
+}
+
+.input-group{
+    select.form-control {
+        background-position-x: 91%;
+    }
+
+    &.btn-icon{
+        .form-control{
+            border-top-right-radius: $input-border-radius !important;
+            border-bottom-right-radius: $input-border-radius !important;
+        }
+        .btn{
+            background-color: $white;
+            position: absolute;
+            right: 0;
+            z-index: 100;
+            padding: 11px 10px 13px 10px;
+            border: 0 solid transparent;
+            margin-top: 1px;
+            margin-right: 1px;
+
+            img{
+                transition: all 0.3s;
+                opacity: 0.75;
+                height: 15px;
+            }
+
+            &:hover{
+                img{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+.form-dmy{
+    .d{
+        width: 25%;
+    }
+    .m{
+        width: 45%;
+    }
+    .y{
+        width: 30%;
+    }
+}
+
+.form-calendar{
+    background: url("../images/calendar-icon.svg") 96% / auto no-repeat;
+    background-position-y: 12px;
+    padding-right: 40px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input[type=number]{
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+}
+
+.form-check {
+    margin-bottom: 24px;
+    .form-check-input {
+        border-color: $gray-450;
+        margin-right: 10px;
+    }
+    .form-check-label {
+        display: inline;
+        font-size: 14px;
+        color: $gray-650;
+        padding-top: 1px;
+        transition: all 0.3s;
+    }
+
+    .form-check-input:checked ~ .form-check-label {
+        color: $black;
+    }
+
+    .optional-text{
+        @extend .optional-text;
+    }
+
+    &.check-policy{
+        .form-check-input.is-invalid~.form-check-label{
+            color: initial;
+        }
+    }
+}
+
+.form-check-input{
+    &:checked[type=checkbox]{
+        border-color: $primary;
+    }
+    &:checked[type=radio]{
+        background-color: transparent;
+        background-position-y: 0.03rem;
+        background-position-x: 0.01rem;
+        background-size: 14px;
+        border-color: $primary;
+    }
+}

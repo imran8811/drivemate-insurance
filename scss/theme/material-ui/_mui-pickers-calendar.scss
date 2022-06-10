@@ -1,0 +1,84 @@
+.MuiPickersBasePicker-container {
+    .MuiPickersBasePicker-pickerView {
+        .MuiTypography-body1,
+        .MuiTypography-body2,
+        .MuiTypography-caption {
+            font-family: $font-family-base;
+        }
+        .MuiPickersDay-daySelected {
+            background-color: $primary;
+        }
+        .MuiPickersYearSelection-container {
+            @extend .custom-scrollbar;
+
+            .MuiPickersYear-root {
+                &:focus {
+                    color: $primary !important;
+                }
+            }
+        }
+    }
+}
+.MuiPickersToolbar-toolbar {
+    background-color: $primary !important;
+    display: inline-block !important;
+    height: auto !important;
+}
+.MuiPickersDatePickerRoot-toolbar {
+    align-items: normal !important;
+    padding-top: 10px;
+    .MuiButtonBase-root {
+        width: 100% !important;
+        display: block !important;
+        clear: both;
+        opacity: 0.85;
+        transition: all 0.3s;
+        .MuiTypography-alignLeft {
+            text-align: center !important;
+        }
+
+        &:hover {
+            background-color: $primary;
+            opacity: 1;
+        }
+
+        &:first-child {
+            @extend .btn-sm;
+        }
+
+        &:last-child {
+            padding-top: 0 !important;
+        }
+
+        .MuiButton-label {
+            .MuiTypography-root {
+                line-height: normal !important;
+            }
+        }
+    }
+}
+.MuiPickersCalendarHeader-switchHeader {
+    width: 95%;
+    margin: auto;
+    .MuiButtonBase-root {
+        border-radius: $btn-border-radius !important;
+        .MuiTouchRipple-root {
+            display: none !important;
+        }
+    }
+}
+.MuiPickersDay-day {
+    .MuiTouchRipple-root {
+        display: none !important;
+    }
+}
+.MuiPickersMonthSelection-container{
+    margin: auto;
+    max-width: 310px;
+    width: 100% !important;
+    .MuiPickersMonth-root{
+        &:focus{
+            color: $black;
+        }
+    }
+}

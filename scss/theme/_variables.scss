@@ -1,0 +1,116 @@
+/********************** Color Variables **********************/
+$white: #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-225: #e6e6e6 !default;
+$gray-250: #f2f2f2 !default;
+$gray-275: #e5e5e5 !default;
+$gray-300: #dee2e6 !default;
+$gray-350: #e0e0e0 !default;
+$gray-375: #d9d9d9 !default;
+$gray-400: #ced4da !default;
+$gray-450: #bfbfbf !default;
+$gray-500: #adb5bd !default;
+$gray-550: #a3a3a3 !default;
+$gray-600: #232527 !default;
+$gray-650: #7f7f7f !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-850: #404040 !default;
+$gray-900: #212529 !default;
+$black: #000 !default;
+
+$primary: #ea2227 !default;
+$secondary: $gray-450 !default;
+$success: #33cc59 !default;
+$warning: #fb8c00 !default;
+$danger: #dc3545 !default;
+$info: #17a2b8 !default;
+$light: $white !default;
+$dark: $black !default;
+$themeLight: #eaeaea !default;
+$fb: #3b5998 !default;
+$tw: #55acee !default;
+$sh: #95d03a !default;
+$line: #00b900 !default;
+$insta: #d3006e !default;
+
+$cCrdRadius: 16px !default;
+
+$border-color: $gray-450 !default;
+$layout-max-width: 1140px !default;
+$container-max-widths: (
+  xl: 1140px,
+) !default;
+
+$font-family-base: "Montserrat-500", Arial, Helvetica, sans-serif !default;
+$font-family-base-regular: "Montserrat-Regular", Arial, Helvetica, sans-serif !default;
+$font-family-base-600: "Montserrat-600", Arial, Helvetica, sans-serif !default;
+$font-family-base-700: "Montserrat-700", Arial, Helvetica, sans-serif !default;
+$font-size-base: 0.875rem !default;
+
+$hr-color: $gray-275 !default;
+$hr-opacity: 1 !default;
+
+// Button
+$btn-padding-y: 0.75rem !default;
+$btn-padding-x: 1.5rem !default;
+$btn-border-radius: 0.5rem !default;
+$btn-font-size: 1rem !default;
+
+// Badge
+$badge-font-size: 12px !default;
+$badge-font-weight: normal !default;
+$badge-padding-y: 4px !default;
+$badge-padding-x: 12px !default;
+
+// Form
+$input-padding-y: 0.75rem !default;
+$input-padding-x: 0.75rem !default;
+$input-font-family: $font-family-base !default;
+$input-font-size: 0.875rem !default;
+$input-border-radius: 0.5rem !default;
+$input-height: 3rem !default;
+$input-border-color: $gray-450 !default;
+$input-focus-border-color: $primary !default;
+$input-focus-box-shadow: 0 0 0 transparent !default;
+$form-feedback-invalid-color: $primary !default;
+$input-placeholder-color: $gray-450 !default;
+$input-plaintext-color: $black !default;
+$form-feedback-icon-invalid: none !default;
+$input-disabled-bg: $gray-100 !default;
+$form-select-padding-y: $input-padding-y !default;
+$form-select-padding-x: $input-padding-x !default;
+$form-select-font-family: $input-font-family !default;
+$form-select-font-size: $input-font-size !default;
+$form-select-border-color: $input-border-color !default;
+$form-select-border-radius: $input-border-radius !default;
+$form-select-focus-border-color: $input-focus-border-color !default;
+$form-select-focus-box-shadow: $input-focus-box-shadow !default;
+$input-group-addon-bg: $themeLight !default;
+$input-group-addon-border-color: $input-border-color !default;
+$form-check-input-width: 1.35em !default;
+$form-check-min-height: 1.35em !default;
+$form-check-input-border: 2px solid $gray-450;
+$form-check-input-checked-bg-image: url("../images/input-checked.svg") !default;
+$form-check-radio-checked-bg-image: url("../images/input-radio.svg") !default;
+$form-check-input-focus-box-shadow: $input-focus-box-shadow !default;
+
+// The dropdown menu
+$dropdown-padding-y: 0.75rem !default;
+$dropdown-padding-x: 0.75rem !default;
+$dropdown-border-radius: 1rem !default;
+$dropdown-box-shadow: 0 2rem 4rem rgba($black, 0.16) !default;
+$dropdown-border-color: $gray-250 !default;
+$dropdown-item-padding-y: 0.813rem !default;
+$dropdown-item-padding-x: 1.5rem !default;
+$dropdown-inner-border-radius: 0.5rem !default;
+$dropdown-link-color: $gray-650 !default;
+$dropdown-link-hover-color: $black !default;
+$dropdown-link-hover-bg: $gray-250 !default;
+
+// Card
+$card-border-radius: 16px !default;
+$card-spacer-y: 40px !default;
+$card-spacer-x: 40px !default;
+$card-border-width: 0 !default;

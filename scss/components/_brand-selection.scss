@@ -1,0 +1,323 @@
+.bs-wrap {
+    width: 100%;
+    display: inline-block;
+    padding-top: 24px;
+    margin-bottom: 80px;
+}
+
+.bs-banner {
+    background: url("../images/bs-banner.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    display: inline-block;
+    border-radius: 24px;
+    margin: 36px 0 24px 0;
+
+    .title {
+        @extend .title2;
+        line-height: 32px;
+        color: $white;
+        text-shadow: 0px 16px 32px rgba($black, 0.16);
+        margin: 118px 64px 118px 64px;
+    }
+}
+
+.bs-promo-banner{
+    width: 100%;
+    display: inline-block;
+    margin: 36px 0 24px 0;
+
+    img{
+        max-width: 100%;
+        border-radius: 16px;
+    }
+
+}
+
+.brand-search {
+    width: 100%;
+    display: inline-block;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid $gray-375;
+
+    .title {
+        @extend .title2;
+        font-family: $font-family-base-700;
+        font-weight: normal;
+        margin-top: 3px;
+    }
+
+    .search {
+        background: url("../images/bs-search-icon.svg") no-repeat right;
+        font-size: 14px;
+        color: $gray-650;
+        height: 18px;
+        width: 0;
+        background-color: transparent;
+        border: 0 solid transparent;
+        cursor: pointer;
+        float: right;
+        transition: all 0.3s;
+        padding-right: 18px;
+        margin-top: 5px;
+
+        &::placeholder {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        &:focus,
+        &:focus-visible,
+        &.active {
+            width: 200px;
+            cursor: text;
+            border: 0 solid transparent;
+            box-shadow: 0 0 0 transparent;
+            outline: 0 transparent;
+            padding-right: 23px;
+
+            &::placeholder,
+            &::value {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
+
+    .auto-search {
+        display: inline-block;
+        width: auto;
+        float: right;
+
+        .bmy-selector {
+            float: left;
+            margin-right: 5px;
+            .btn {
+                color: $gray-650;
+                padding-left: 0;
+                padding-right: 3px;
+
+                &.active{
+                    color: $black;
+                }
+            }
+        }
+        .auto-search {
+            float: right;
+            .sc-ifAKCX {
+                z-index: 100;
+                cursor: pointer;
+                .wrapper {
+                    border: 1px solid transparent;
+                    border-radius: $dropdown-border-radius;
+                    background-color: transparent;
+                    box-shadow: 0 0 0 transparent;
+                    transition: all 0.3s;
+                    font-family: $font-family-base;
+                    font-size: 14px;
+                    color: $gray-650;
+                    position: relative;
+
+                    .sc-bxivhb {
+                        .sc-bdVaJa {
+                            position: absolute;
+                            right: 15px;
+                        }
+                        input {
+                            font-family: $font-family-base;
+                            font-size: 14px;
+                            color: transparent;
+                            width: 50px;
+                            transition: all 0.3s;
+                            cursor: pointer;
+
+                            &::placeholder {
+                                color: transparent;
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+
+                            &:hover, &:focus{
+                                width: 200px;
+                                cursor: initial;
+                                color: $gray-650;
+
+                                &::placeholder {
+                                    color: $gray-650;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+
+                        &:hover, &:focus{
+                            input{
+                                width: 200px;
+                                cursor: initial;
+                                color: $gray-650;
+
+                                &::placeholder {
+                                    color: $gray-650;
+                                    opacity: 1;
+                                    visibility: visible;
+                                }
+                            }
+                        }
+                    }
+
+                    .clear-icon {
+                        background-color: $gray-250;
+                        position: relative;
+                        transition: all 0.3s;
+                        margin-top: -2px;
+                    }
+
+                    &:hover,
+                    &:focus,
+                    &:focus-within {
+                        background-color: $white;
+                        box-shadow: 0 0 0 transparent;
+
+                        .clear-icon {
+                            background-color: $white;
+                        }
+                    }
+
+                    &:focus,
+                    &:focus-within {
+                        box-shadow: $dropdown-box-shadow;
+                    }
+
+                    .sc-bwzfXH {
+                        svg {
+                            display: none;
+                        }
+                    }
+
+                    &:focus {
+                        border-color: $input-border-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.brand-section-wrap {
+    width: 100%;
+    display: flex;
+    margin-bottom: 24px;
+    border-bottom: 1px solid $gray-375;
+
+    &.lg {
+        .swiper-container {
+            .swiper-slide {
+                min-width: 180px;
+            }
+        }
+    }
+
+    &.sm {
+        .swiper-container {
+            border-radius: 8px;
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                &::after {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 30px;
+                    font-size: 12px;
+                    padding-top: 9px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .brand-search {
+        .auto-search {
+            float: none;
+            width: 100%;
+            .bmy-selector {
+                display: none;
+            }
+            .sc-ifAKCX {
+                .wrapper {
+                    border-color: $input-border-color !important;
+                    .sc-bxivhb {
+                        input {
+                            width: 100% !important;
+                            color: $gray-650 !important;
+
+                            &:focus {
+                                width: 100% !important;
+                            }
+
+                            &::placeholder {
+                                color: $gray-650 !important;
+                                opacity: 1 !important;
+                                visibility: visible !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .bs-banner {
+        height: 134px;
+
+        .title {
+            font-size: 12px;
+            margin: 49px 20px;
+            line-height: 18px;
+        }
+    }
+    .bs-promo-banner{
+        margin-top: 0;
+        img{
+            border-radius: 10px;
+        }
+    }
+    .brand-search {
+        .title {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .auto-search {
+            .sc-ifAKCX {
+                .wrapper {
+                    &:hover {
+                        background-color: transparent;
+                    }
+                    &:focus,
+                    &:focus-within {
+                        background-color: $white;
+                    }
+                }
+            }
+        }
+        .search {
+            &:focus,
+            &:focus-visible,
+            &.active {
+                width: 100%;
+            }
+        }
+    }
+    .brand-section-wrap {
+        &.lg,
+        &.sm {
+            .swiper-container {
+                border-radius: 0;
+            }
+        }
+    }
+}

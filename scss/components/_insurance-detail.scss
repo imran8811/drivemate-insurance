@@ -1,0 +1,22 @@
+.insurance-detail-wrap{
+    display: flow-root;
+    .insurance-detail-col{
+        .insurance-card, .card{
+            .text-detail{
+                height: auto;
+                overflow: initial;
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .insurance-detail-wrap{
+        display: flex;
+        .insurance-detail-col{
+            padding: 0;
+            .insurance-card, .card{
+                border-radius: 0;
+            }
+        }
+    }
+}

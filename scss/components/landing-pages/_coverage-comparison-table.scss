@@ -1,0 +1,356 @@
+.coverage-comparison-table-wrap {
+    .banner {
+        background: url("../images/landing-pages/coverage-comparison-table/cct-bg-banner.svg") no-repeat top center;
+        background-size: 110%;
+        transition: all 1s;
+        padding: 100px 0;
+        display: flex;
+        width: 100%;
+        vertical-align: middle;
+
+        .bg {
+            background: url("../images/landing-pages/coverage-comparison-table/cct-bg-banner-text-bg-comparison.svg") no-repeat;
+            background-size: 80%;
+            background-position-x: center;
+            background-position-y: 50%;
+            width: 100%;
+            max-width: 1400px;
+            display: table;
+            margin: auto;
+            transition: all 0.5s;
+
+            img {
+                max-width: 100%;
+                transition: all 0.7s;
+                filter: grayscale(50%);
+
+                &.comparison-icon, &.circle-lg, &.circle-sm{
+                    border-radius: 100%;
+                }
+
+                &.circle-sm {
+                    margin-top: 125px;
+                    float: right;
+                }
+
+                &.rectangle-lg, &.rectangle-sm{
+                    filter: grayscale(0);
+                }
+            }
+
+            .title1 {
+                font-family: $font-family-base-700;
+                max-width: 525px;
+                display: inline-block;
+                margin: 0 auto 24px auto;
+                transition: all 0.3s;
+            }
+
+        }
+
+        &:hover {
+            background-image: url("../images/landing-pages/coverage-comparison-table/cct-bg-banner-2.png");
+            background-size: 100%;
+            
+            .bg {
+                background-image: url("../images/landing-pages/coverage-comparison-table/cct-bg-banner-text-bg-comparison-2.png");
+                background-size: 75%;
+                background-position-y: 45%;
+
+                .title1 {
+                    font-size: 38px;
+                    max-width: 525px;
+                }
+
+                img {
+                    filter: grayscale(0%);
+
+                    &.circle-lg {
+                        margin-top: -20px;
+                        box-shadow: -31px 46px 43px rgba($black, 0.25);
+                    }
+                    &.circle-sm {
+                        margin-top: 80px;
+                        box-shadow: 10px 20px 20px rgba($black, 0.15);
+                    }
+                    &.comparison-icon{
+                        margin-top: 20px;
+                    }
+                    &.rectangle-lg{
+                        margin-top: 20px;
+                    }
+                    &.rectangle-sm{
+                        margin-top: -20px;
+                    }
+                }
+            }
+        }
+    }
+    
+    .protection-act-wrap{
+        .title1{
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-bottom: 65px;
+        }
+
+        .icons-wrap{
+            width: 702px;
+            display: table;
+            max-width: 100%;
+            margin: 0 auto 65px auto;
+
+            .icon-box{
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 110%;
+                width: 100%;
+                border-radius: 24px;
+                transition: all 0.3s;
+                filter: grayscale(50%);
+                height: 143px;
+                display: inline-block;
+                text-align: center;
+
+                img{
+                    margin: 15px auto 0 auto;
+                    display: table;
+                    clear: both;
+                    transition: all 0.3s;
+                }
+
+                .text{
+                    width: 100%;
+                    clear: both;
+                    display: block;
+                    font-family: $font-family-base-700;
+                    font-size: 18px;
+                    color: $white;
+                    transition: all 0.3s;
+                }
+
+                &.sedan{
+                    background-image: url("../images/landing-pages/coverage-comparison-table/cct-sedan-bg.png");
+                }
+
+                &.pickup{
+                    background-image: url("../images/landing-pages/coverage-comparison-table/cct-pickup-bg.png");
+                }
+
+                &.van{
+                    background-image: url("../images/landing-pages/coverage-comparison-table/cct-van-bg.png");
+                }
+
+                &:hover{
+                    background-size: 100%;
+                    filter: grayscale(0%);
+
+                    img{
+                        margin-top: 20px;
+                    }
+
+                    .text{
+                        margin-top: -10px;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+
+        small{
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            color: $black;
+            margin: 40px 0 60px 0;
+        }
+
+        .title4{
+            width: 100%;
+            display: block;
+            text-align: center;
+        }
+
+        .custom-scrollbar
+        {
+            overflow: hidden;
+            border-radius: 8px;
+
+            .cs-row {
+                width: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .coverage-comparison-table-wrap {
+        .banner {
+            height: 89vh;
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 1134px) {
+    .coverage-comparison-table-wrap{
+        .protection-act-wrap{
+            .custom-scrollbar
+                {
+                    overflow: auto;
+                    .cs-row {
+                        width: 1121px;
+
+                        .col-6{
+                            &:last-child{
+                                padding-right: 0;
+                            }
+                        }
+                    }
+                }
+        }
+    }
+}
+
+@media (max-width: 1120px) {
+    .coverage-comparison-table-wrap{
+        .insurance-table-wrap{
+            .custom-scrollbar
+                {
+                    overflow: auto;
+                    .cs-row {
+                        width: 950px;
+
+                        .col-5{
+                            padding-right: 0;
+                        }
+                    }
+                }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .coverage-comparison-table-wrap {
+        .banner {
+            background-size: cover;
+            height: auto;
+            padding: 50px 0;
+
+            .bg {
+                background-size: 60%;
+
+                .title1 {
+                    font-size: 38px;
+                }
+                small {
+                    font-size: 13px;
+                }
+            }
+
+            &:hover{
+                background-size: cover;
+            }
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    .coverage-comparison-table-wrap{
+        .protection-act-wrap{
+            .icons-wrap{
+                .icon-box, .icon-box:hover{
+                    background-size: cover;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .coverage-comparison-table-wrap {
+        .banner, .banner:hover {
+            background-size: cover;
+            .bg{
+                background-size: 110%;
+                background-position: center;
+
+                .title1 {
+                    font-size: 36px;
+                }
+
+                img{
+                    &.circle-lg{
+                        width: 175px;
+                    }
+                    &.rectangle-lg{
+                        height: 175px;
+                    }
+                    &.circle-sm{
+                        margin-top: 0;
+                    }
+                    &.rectangle-sm{
+                        height: 150px;
+                        position: absolute;
+                        top: 120px;
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        .insurance-table-wrap, .protection-act-wrap{
+            .title1{
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 508px) {
+    .coverage-comparison-table-wrap{
+        .insurance-table-wrap{
+            padding-bottom: 90px;
+            ul{
+                width: auto;
+                position: absolute;
+                left: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width: 374px) {
+    .coverage-comparison-table-wrap{
+        .insurance-table-wrap{
+            ul{
+                li{
+                    small{
+                        width: 85%;
+                        line-height: normal;
+                    }
+                }
+            }
+        }
+        .protection-act-wrap{
+            .icons-wrap{
+                .icon-box{
+                    height: 120px;
+                    img{
+                        width: 58px;
+                    }
+                    .text{
+                        font-size: 14px;
+                    }
+                    &:hover{
+                        .text{
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

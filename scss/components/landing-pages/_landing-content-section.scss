@@ -1,0 +1,23 @@
+.landing-content-section{
+    width: 100%;
+    display: inline-block;
+    padding-top: 200px;
+
+    &:last-child{
+        padding-bottom: 200px;
+    }
+
+    .flow-root{
+        display: flow-root;
+    }
+}
+
+@media (max-width: 991px) {
+    .landing-content-section{
+        padding-top: 120px;
+
+    &:last-child{
+        padding-bottom: 120px;
+        }
+    }
+}

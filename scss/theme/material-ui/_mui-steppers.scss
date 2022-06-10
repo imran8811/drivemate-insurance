@@ -1,0 +1,81 @@
+.MuiPaper-root.MuiStepper-root.MuiStepper-alternativeLabel.MuiPaper-elevation0 {
+    background-color: transparent;
+    padding: 40px 0;
+    max-width: 558px;
+    margin: auto;
+
+    .MuiStep-root.MuiStep-alternativeLabel {
+        .MuiStepConnector-alternativeLabel {
+            left: calc(-50% + 12px);
+            width: 88%;
+            .MuiStepConnector-line {
+                border-top-width: 2px;
+                border-color: $primary !important;
+            }
+            &.Mui-disabled {
+                .MuiStepConnector-line {
+                    border-color: $gray-450 !important;
+                }
+            }
+        }
+        .MuiStepLabel-root.MuiStepLabel-alternativeLabel {
+            .MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel {
+                background-color: $white;
+                width: 24px;
+                height: 24px;
+                border: 8px solid $primary;
+                border-radius: 24px;
+                opacity: 1;
+                position: relative;
+                z-index: 1;
+            }
+            .MuiStepLabel-labelContainer {
+                .MuiTypography-root.MuiStepLabel-label.MuiStepLabel-alternativeLabel.MuiTypography-body2 {
+                    font-family: $font-family-base;
+                    font-size: 14px;
+                    color: $black;
+                    margin-top: 10px;
+                    font-weight: bold;
+                    opacity: 1;
+                }
+            }
+
+            &.Mui-disabled {
+                .MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel {
+                    background-color: $gray-250;
+                    border: 2px solid $gray-450;
+                }
+                .MuiStepLabel-labelContainer {
+                    .MuiTypography-root.MuiStepLabel-label.MuiStepLabel-alternativeLabel.MuiTypography-body2 {
+                        font-weight: normal;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+
+        &.MuiStep-completed {
+            .MuiStepConnector-alternativeLabel {
+                .MuiStepConnector-line {
+                    border-color: $primary;
+                }
+            }
+            .MuiStepLabel-root.MuiStepLabel-alternativeLabel {
+                .MuiStepLabel-iconContainer.MuiStepLabel-alternativeLabel {
+                    background-image: url("../images/steppers-check.svg");
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 15px;
+                    background-color: $primary;
+                    border: 0 solid transparent;
+                }
+                .MuiStepLabel-labelContainer {
+                    .MuiTypography-root.MuiStepLabel-label.MuiStepLabel-alternativeLabel.MuiTypography-body2 {
+                        font-weight: normal;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+    }
+}

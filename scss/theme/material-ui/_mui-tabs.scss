@@ -1,0 +1,8 @@
+.MuiTab-root{
+    font-family: $font-family-base !important;
+    font-weight: normal !important;
+
+    .MuiTouchRipple-root{
+        display: none;
+    }
+}

@@ -1,0 +1,254 @@
+.voluntary-motor-insurance-t6-wrap {
+    .banner {
+        background: url("../images/landing-pages/voluntary-t6/voluntary-t6-bg-banner.svg") no-repeat top center;
+        background-size: 110%;
+        transition: all 1s;
+        padding: 100px 0;
+        display: flex;
+        width: 100%;
+        vertical-align: middle;
+
+        .bg {
+            background: url("../images/landing-pages/voluntary-t6/voluntary-t6-text-bg-insurance.svg") no-repeat;
+            background-size: 65%;
+            background-position-x: center;
+            background-position-y: 50%;
+            width: 100%;
+            max-width: 1400px;
+            display: table;
+            margin: auto;
+            transition: all 0.5s;
+
+            img {
+                max-width: 100%;
+                transition: all 0.7s;
+
+                &.lg-1, &.lg-2, &.sm {
+                    filter: grayscale(50%);
+                }
+
+                &.sm {
+                    border-radius: 100%;
+                }
+            }
+
+            .title1, small {
+                max-width: 405px;
+                display: inline-block;
+                margin: 0 auto 24px auto;
+                transition: all 0.3s;
+            }
+
+            .title1 {
+                font-family: $font-family-base-700;
+            }
+
+            .media {
+                max-width: 295px;
+                padding: 12px 25px;
+                margin: 70px 0 0 0;
+                float: right;
+                background-color: rgba($white, 0.6);
+                border-radius: 35px;
+                transition: all 1.3s;
+
+                img {
+                    float: left;
+                    margin-right: 20px;
+                }
+
+                .media-body {
+                    @extend .title4;
+                    text-align: left;
+
+                    .type-counter{
+                        background-color: $black;
+                        width: 34px;
+                        height: 34px;
+                        line-height: 34px;
+                        text-align: center;
+                        border-radius: 100%;
+                        font-size: 16px;
+                        color: $white;
+                        display: inline-block;
+                        position: absolute;
+                        margin-top: -40px;
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            background: url("../images/landing-pages/voluntary-t6/voluntary-t6-bg-banner-2.png") no-repeat top center;
+            background-size: 100%;
+
+            .bg {
+                background: url("../images/landing-pages/voluntary-t6/voluntary-t6-text-bg-insurance-2.png") no-repeat;
+                background-size: 60%;
+                background-position-x: center;
+                background-position-y: 50%;
+
+                .title1, small {
+                    max-width: 410px;
+                }
+
+                .title1 {
+                    font-size: 38px;
+                }
+                small {
+                    font-size: 13px;
+                }
+
+                img {
+                    &.lg-1, &.lg-2, &.sm {
+                        filter: grayscale(0%);
+                    }
+                    &.lg-1 {
+                        margin-top: 20px;
+                    }
+                    &.sm {
+                        box-shadow: -10px 20px 20px rgba($black, 0.15);
+                    }
+                    &.lg-2 {
+                        margin-top: -20px;
+                    }
+                }
+
+                .media {
+                    box-shadow: -44px 27px 43px rgba($black, 0.15);
+                }
+            }
+        }
+    }
+
+    .services-wrap{
+        padding-top: 120px;
+        .service{
+            width: 100%;
+            display: inline-block;
+            margin-top: 80px;
+
+            img{
+                height: 116px;
+                clear: both;
+                display: block;
+                margin-bottom: 35px;
+            }
+
+            .title2, .title3{
+                width: 100%;
+                display: block;
+                margin-bottom: 24px;
+            }
+            .title3{
+                color: $primary;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 16px;
+                color: $gray-650;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .voluntary-motor-insurance-t6-wrap {
+        .banner {
+            height: 89vh;
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .voluntary-motor-insurance-t6-wrap {
+        .banner {
+            background-size: cover;
+            height: auto;
+            padding: 50px 0;
+
+            .bg {
+                background-size: 60%;
+
+                .title1, small {
+                    max-width: 590px;
+                }
+
+                .title1 {
+                    font-size: 38px;
+                }
+                small {
+                    font-size: 13px;
+                }
+
+                img {
+                    &.lg-1, &.lg-2, &.sm {
+                        filter: grayscale(0%);
+                    }
+                    &.lg-1 {
+                        margin-top: 20px;
+                    }
+                    &.sm {
+                        box-shadow: -10px 20px 20px rgba($black, 0.15);
+                    }
+                    &.lg-2 {
+                        margin-top: -20px;
+                    }
+                }
+
+                .media {
+                    display: none;
+                }
+            }
+
+            &:hover{
+                background-size: cover;
+            }
+        }
+
+        .services-wrap{
+            padding-top: 0;
+        }
+    }
+}
+
+
+
+@media (max-width: 575px) {
+    .voluntary-motor-insurance-t6-wrap {
+        .banner, .banner:hover {
+            .bg{
+                background-size: 110%;
+                background-position: center;
+
+                .title1 {
+                    font-size: 36px;
+                    max-width: 100%;
+                }
+                small {
+                    font-size: 14px;
+                    max-width: 100%;
+                }
+
+                img{
+                    &.lg-1{
+                        margin-top: 0;
+                        max-width: 200px;
+                    }
+                    &.lg-2{
+                        margin-top: 60px;
+                        max-width: 250px;
+                    }
+                    &.sm{
+                        display: none;
+                    }
+                }
+                .media{
+                    display: none;
+                }
+            }
+        }
+    }
+}

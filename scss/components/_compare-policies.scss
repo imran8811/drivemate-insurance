@@ -1,0 +1,149 @@
+.compare-policies-sticky{
+    @extend .w-100, .d-inline-block, .pt-2;
+    z-index: 100;
+}
+.compare-policies-section {
+    width: 100%;
+    display: inline-block;
+    border-bottom: 1px solid $gray-375;
+
+    .title {
+        font-weight: bold;
+        color: $black;
+        width: 100%;
+        display: inline-block;
+        clear: both;
+        padding: 24px 0;
+
+        span {
+            font-weight: normal;
+            color: $gray-650;
+            width: 100%;
+            display: block;
+            clear: both;
+        }
+    }
+
+    .insurance-card-wrap {
+        width: 100%;
+        display: flex;
+        border-radius: $cCrdRadius;
+        border-bottom: 0 solid transparent;
+
+        .insurance-card {
+            margin-bottom: 16px;
+            .title {
+                padding-bottom: 0;
+            }
+            &:hover {
+                box-shadow: 0 0 0 transparent;
+            }
+        }
+
+        .swiper-web {
+            display: flex;
+            width: 100%;
+            .insurance-card {
+                flex: 1;
+                margin-right: $grid-gutter-width;
+
+                &:last-child {
+                    margin-right: 0 !important;
+                }
+            }
+        }
+
+        .swiper-responsive {
+            width: 100%;
+            display: none;
+
+            .swiper-container {
+                margin: 0;
+                border-radius: 0;
+
+                .swiper-wrapper {
+                    .swiper-slide {
+                        min-width: 261px;
+                        margin-right: $grid-gutter-width !important;
+    
+                        &:last-child {
+                            margin-right: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .card {
+        border-radius: $cCrdRadius;
+        margin-bottom: 24px;
+
+        .card-body {
+            padding: 40px 40px 24px 40px;
+
+            .col-cps {
+                padding-left: 0;
+                padding-right: 0;
+                .cps {
+                    width: 100%;
+                    display: inline-block;
+                    font-size: 14px;
+                    padding: 0 16px 16px 16px;
+                    margin-bottom: 16px;
+                    text-align: center;
+                    border-bottom: 1px solid $gray-225;
+
+                    .label {
+                        color: $gray-650;
+                        width: 100%;
+                        display: block;
+                        clear: both;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .compare-policies-section {
+        .insurance-card-wrap {
+            .swiper-web {
+                .insurance-card {
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+        } 
+    }
+}
+
+@media (max-width: 575px) {
+    .compare-policies-section {
+        .insurance-card-wrap {
+            .swiper-responsive {
+                display: inline-block;
+            }
+            .swiper-web {
+                display: none;
+            }
+        }
+        .card {
+            .card-body {
+                .col-cps {
+                    width: 100%;
+                    min-width: 100%;
+                    .cps {
+                        text-align: initial;
+                        padding: 0 0 16px 0;
+
+                        .caption {
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

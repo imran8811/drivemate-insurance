@@ -1,0 +1,29 @@
+@import "./intlTelInput";
+
+.tel-input-group{
+    .btn{
+        border: 1px solid $gray-450;
+        border-right: 0 solid transparent;
+    }
+    .form-control{
+        border-left: 0 solid transparent;
+    }
+
+    .iti-flag{
+        display: inline-block;
+    }
+
+    .cc-dd {
+        @extend .custom-scrollbar;
+        width: 100%;
+        height: 200px;
+        margin-top: 48px;
+
+        .dropdown-item{
+            cursor: pointer;
+            .iti-flag{
+                margin-right: 5px;
+            }
+        }
+    }
+}

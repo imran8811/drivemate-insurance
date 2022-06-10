@@ -1,0 +1,142 @@
+.insurance-table-wrap{
+    .title1{
+        font-family: $font-family-base-700;
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .stars{
+        display: inline-block;
+        float: left;
+        width: 100%;
+        .star{
+            background: url("../images/landing-pages/coverage-comparison-table/cct-star.png") no-repeat center;
+            float: left;
+            width: 7px;
+            height: 7px;
+            margin-right: 2px;
+            display: inline-block;
+        }
+    }
+
+    .custom-scrollbar
+    {
+        overflow: hidden;
+        border-radius: 8px;
+        .cs-row {
+            width: auto;
+        }
+    }
+
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 24px 0 0 0;
+        float: none;
+        width: 100%;
+        clear: both;
+
+        li{
+            list-style: none;
+            float: none;
+            width: 100%;
+            clear: both;
+            display: inline-block;
+
+            .stars{
+                width: 30px;
+                margin: 5px 5px 0 0;
+            }
+
+            small{
+                font-size: 12px;
+                color: $black;
+                float: left;
+            }
+        }
+    }
+}
+
+.insurance-table{
+
+    .table-col{
+        background-color: $white;
+        color: $black;
+        text-align: center;
+        width: 100%;
+        height: 41px;
+        border-radius: 8px;
+        margin-bottom: 8px;
+        padding: 12px;
+        line-height: normal;
+
+        small{
+            color: $gray-550;
+            font-size: 10px;
+            line-height: normal;
+        }
+
+        &.primary{
+            background-color: $primary;
+            color: $white;
+        }
+
+        &.dark-gray{
+            background-color: $gray-850;
+            color: $white;
+        }
+
+        &.light-gray{
+            background-color: $gray-650;
+            color: $white;
+        }
+
+        &.h-100px{
+            height: 100px;
+        }
+
+        &.h-140px{
+            height: 140px;
+        }
+
+        &.h-200px{
+            height: 200px;
+        }
+
+        &.h-333px{
+            height: 333px;
+        }
+
+        &.icon-col{
+            height: 41.5px;
+        }
+
+        .icon{
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin: auto;
+            &.check{
+                background-image: url("../images/landing-pages/coverage-comparison-table/cct-check.png");
+            }
+            &.cross{
+                background-image: url("../images/landing-pages/coverage-comparison-table/cct-cross.png");
+            }
+        }
+
+        &.flex{
+            display: flex;
+            vertical-align: middle;
+
+            .flex-text{
+                display: table;
+                margin: auto;
+            }
+        }
+    }
+}

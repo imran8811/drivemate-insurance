@@ -1,0 +1,59 @@
+////////// Theme Bootstrap //////////
+@import "./theme/variables";
+@import "./theme/bootstrap";
+@import "./theme/dm-loader";
+@import "./theme/fonts/montserrat";
+@import "./theme/titles";
+@import "./theme/buttons";
+@import "./theme/badge";
+@import "./theme/dropdown";
+@import "./theme/form";
+@import "./theme/media";
+@import "./theme/custom-scrollbar";
+@import "./theme/custom";
+
+////////// Material UI //////////
+@import "./theme/material-ui/mui-typography";
+@import "./theme/material-ui/mui-button";
+@import "./theme/material-ui/mui-paper";
+@import "./theme/material-ui/mui-list";
+@import "./theme/material-ui/mui-steppers";
+@import "./theme/material-ui/mui-swiper";
+@import "./theme/material-ui/mui-form-control";
+@import "./theme/material-ui/mui-pickers-calendar";
+@import "./theme/material-ui/mui-dialog";
+@import "./theme/material-ui/mui-tabs";
+@import "./theme/material-ui/mui-accordion";
+
+////////// Components //////////
+@import "./components/header";
+@import "./components/authentication-dialog";
+@import "./components/upload-profile-image"; 
+@import "./components/footer";
+@import "./components/app-store";
+@import "./components/brand-card";
+@import "./components/brand-selection";
+@import "./components/home";
+@import "./components/packages-filter";
+@import "./components/packages-list";
+@import "./components/insurance-card";
+@import "./components/price";
+@import "./components/insurance-form";
+@import "./components/tel-input-group";
+@import "./components/compare-section";
+@import "./components/compare-policies";
+@import "./components/insurance-detail";
+@import "./components/phone-input"; 
+@import "./components/terms-of-services"; 
+
+////////// Landing Pages //////////
+@import "./components/landing-pages/landing-content-section"; 
+@import "./components/landing-pages/text-card"; 
+@import "./components/landing-pages/landing-faqs";
+@import "./components/landing-pages/insurance-types";
+@import "./components/landing-pages/insurance-table"; 
+//////////////////////////////////
+@import "./components/landing-pages/voluntary-motor-insurance-t5"; 
+@import "./components/landing-pages/voluntary-motor-insurance-t6";
+@import "./components/landing-pages/coverage-comparison-table"; 
+@import "./components/landing-pages/third-party-liability";

@@ -1,0 +1,11 @@
+.MuiPaper-root.MuiPaper-elevation1.MuiPaper-rounded{
+    @extend .dropdown-menu;
+    display: inline-block;
+    left: -100px;
+}
+.MuiPaper-rounded{
+    border-radius: $dropdown-border-radius !important;
+}
+.MuiPaper-elevation8{
+    box-shadow: $dropdown-box-shadow !important;
+}

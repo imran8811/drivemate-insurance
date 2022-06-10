@@ -1,0 +1,107 @@
+.MuiDialogContent-root {
+    @extend .custom-scrollbar;
+}
+
+.MuiDialog-paper {
+    width: 558px;
+
+    .btn-back, .btn-dialog-close{
+        width: 25px;
+        height: 25px;
+        padding: 0;
+        position: absolute;
+        margin-top: 2px;
+    }
+
+    .btn-dialog-close{
+        right: 24px;
+    }
+
+    .btn-back {
+        background: url(../images/back-icon.svg) no-repeat center;
+        left: 24px;
+    }
+}
+
+.MuiDialogContent-root {
+    padding: 60px !important;
+}
+
+.Component-root-21 {
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+}
+
+.MuiTypography-body1 {
+    font-family: $font-family-base !important;
+    font-weight: initial !important;
+    font-size: initial !important;
+    letter-spacing: normal !important;
+    color: $black;
+    text-align: center;
+}
+.MuiDialogTitle-root {
+    .MuiIconButton-root {
+        background: url(../images/cross-icon.svg) no-repeat center;
+        width: 14px;
+        height: 14px;
+        top: 16px;
+        right: 15px;
+
+        .MuiTouchRipple-root {
+            display: none;
+        }
+
+        &:hover {
+            background-color: transparent !important;
+        }
+    }
+    .MuiTypography-root{
+        font-weight: bold !important;
+        font-size: 18px !important;
+    }
+}
+.MuiPickersModal-dialogRoot {
+    .MuiPickersBasePicker-container {
+        display: inline-block !important;
+        width: 100%;
+        &.MuiPickersBasePicker-containerLandscape {
+            flex-direction: initial !important;
+            width: 100%;
+        }
+        .MuiPickersToolbar-toolbarLandscape {
+            max-width: 100% !important;
+            width: 100%;
+        }
+        .MuiPickersDatePickerRoot-toolbar {
+            width: 100%;
+        }
+    }
+    .MuiDialogContent-root {
+        padding: 0 !important;
+        .MuiPickersBasePicker-pickerView {
+            max-width: 100%;
+            min-width: 100%;
+        }
+    }
+    .MuiDialogActions-root {
+        text-align: center !important;
+        display: inline-block !important;
+        padding-bottom: 20px;
+
+        .MuiButtonBase-root {
+            &:first-child {
+                @extend .btn-outline-secondary;
+            }
+            &:last-child {
+                @extend .btn-primary;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .MuiDialogContent-root {
+        padding: 24px !important;
+    }
+}

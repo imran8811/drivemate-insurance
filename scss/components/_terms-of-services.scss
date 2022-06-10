@@ -1,0 +1,51 @@
+.terms-of-services{
+    margin-top: 55px;
+    margin-bottom: 70px;
+
+    .sticky-top{
+        top: 20px;
+    }
+
+    .btn{
+        color: $gray-650;
+        padding: 16px;
+        text-align: left;
+        font-size: 14px;
+        border-radius: 8px;
+        font-family: $font-family-base-regular;
+        width: 100%;
+        &.btn-primary{
+            color: $white;
+            box-shadow: 0px 8px 16px rgba($black, 0.16) !important;
+        }
+
+        span{
+            float: left;
+            width: 80%;
+
+            &:first-child{
+                margin-right: 5px;
+                width: 10%;
+            }
+        }
+    }
+
+    p, ul li{
+        font-size: 16px;
+        color: $gray-650;
+    }
+}
+
+@media (max-width: 575px) {
+    .terms-of-services{
+        .title1{
+            font-size: 24px;
+        }
+        .title3{
+            font-size: 16px;
+        }
+        p, ul li{
+            font-size: 14px;
+        }
+    }
+}

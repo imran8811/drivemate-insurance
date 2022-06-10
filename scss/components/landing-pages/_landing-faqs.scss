@@ -1,0 +1,63 @@
+.landing-faqs {
+    .title1 {
+        width: 100%;
+        display: block;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .MuiAccordion-root {
+        background-color: transparent;
+        border: 1px solid $gray-225;
+        border-radius: 16px;
+        margin-bottom: 24px;
+
+        .MuiAccordionSummary-root {
+            padding-bottom: 0;
+            .MuiAccordionSummary-content {
+                padding: 20px;
+                p {
+                    line-height: normal;
+                    letter-spacing: normal;
+                    margin-top: -5px;
+                    &::before {
+                        font-size: 30px;
+                        font-weight: normal;
+                        content: "+";
+                        width: 30px;
+                        display: inline-block;
+                        margin-right: 15px;
+                        position: relative;
+                        top: 4px;
+                    }
+                }
+
+                &.Mui-expanded {
+                    p {
+                        &::before {
+                            content: "-";
+                        }
+                    }
+                }
+            }
+        }
+
+        .MuiCollapse-root {
+            .MuiCollapse-wrapper {
+                padding: 20px;
+
+                .MuiAccordionDetails-root {
+                    margin-left: 45px;
+                    padding-left: 24px;
+                    width: auto;
+                    border-left: 5px solid $primary;
+
+                    p {
+                        color: $gray-650;
+                        margin: 0;
+                        letter-spacing: normal;
+                    }
+                }
+            }
+        }
+    }
+}

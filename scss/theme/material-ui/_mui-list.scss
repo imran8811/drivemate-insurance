@@ -1,0 +1,16 @@
+.MuiList-root.MuiList-padding{
+    padding: $dropdown-padding-y $dropdown-padding-x;
+    border-radius: $dropdown-border-radius;
+    .MuiButtonBase-root.MuiListItem-root.MuiMenuItem-root.MuiMenuItem-gutters.MuiListItem-gutters.MuiListItem-button{
+        @extend .dropdown-item;
+        font-size: 14px;
+        border: 0 solid transparent;
+        padding: $dropdown-item-padding-y $dropdown-item-padding-x;
+        margin: 0;
+        border-radius: $dropdown-inner-border-radius;
+        &:active{
+            background-color: $dropdown-link-hover-bg;
+            color: $dropdown-link-hover-color;
+        }
+    }
+}

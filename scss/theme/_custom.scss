@@ -1,0 +1,59 @@
+.container-fluid {
+    max-width: 1920px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bg-gray {
+    background-color: $gray-250;
+}
+
+.badge {
+    line-height: normal;
+}
+
+.no-wrap{
+    white-space: initial !important;
+    overflow: initial !important;
+    text-overflow: initial !important;
+}
+
+.text-secondary{
+    color: $gray-650 !important;
+}
+
+.no-before {
+    &::before {
+        display: none;
+    }
+}
+
+.no-after {
+    &::after {
+        display: none;
+    }
+}
+
+hr{
+    margin: 24px 0;
+}
+.inner-wrap {
+    display: block;
+}
+.dropdown-menu {
+    display: block !important;
+}
+.MuiTouchRipple-root{
+    display: none;
+}
+@media (max-width: 575px) {
+    .custom-res-container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .w-xs-100{
+        width: 100%;
+    }
+}

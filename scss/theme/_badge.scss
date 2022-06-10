@@ -1,0 +1,15 @@
+.badge-incomplete{
+    background-color: $gray-650;
+  }
+  .badge-pending-payment{
+    background-color: #FFCC00;
+  }
+  .badge-pending-confirmation{
+    background-color: $warning;
+  }
+  .badge-payment-failed, .badge-cancelled{
+    background-color: $danger;
+  }
+  .badge-completed {
+    background-color: $success;
+  }

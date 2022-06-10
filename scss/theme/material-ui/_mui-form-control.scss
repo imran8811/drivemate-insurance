@@ -1,0 +1,73 @@
+.MuiFormControl-root {
+    width: 100%;
+    .MuiInputBase-root {
+        .MuiInputBase-input {
+            @extend .form-control;
+            height: auto;
+        }
+        .MuiOutlinedInput-root.Mui-error {
+            display: none;
+        }
+        &.Mui-error {
+            .MuiInputBase-input {
+                @extend .is-invalid;
+            }
+        }
+        .MuiOutlinedInput-notchedOutline {
+            display: none;
+        }
+
+        &.MuiInput-underline {
+            &::before,
+            &:after {
+                display: none;
+            }
+        }
+        .MuiInputAdornment-root {
+            position: absolute;
+            right: 0;
+
+            .MuiIconButton-root {
+                color: $gray-450;
+                &:hover {
+                    transition: none;
+                    background-color: transparent;
+                }
+                .MuiTouchRipple-root {
+                    display: none;
+                }
+            }
+        }
+        .MuiSelect-root{
+            &::after {
+                content: url("../images/down-arrow.svg");
+                position: absolute;
+                margin: -2px 0 0 7px;
+                border: 0 solid transparent;
+                vertical-align: initial;
+                opacity: 0.5;
+                right: 20px;
+                top: 15px;
+            }
+            &:focus{
+                border-color: $input-border-color;
+            }
+        }
+        .MuiSelect-icon{
+            display: none
+        }
+    }
+    .MuiFormHelperText-root.Mui-error {
+        @extend .invalid-feedback;
+        display: block;
+        font-family: $font-family-base;
+        letter-spacing: normal;
+        line-height: normal;
+        font-weight: normal;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    &.MuiFormControl-marginNormal {
+        margin: 0;
+    }
+}

@@ -1,0 +1,195 @@
+.third-party-liability-wrap {
+    .banner {
+        background: url("../images/landing-pages/third-party-liability/tpl-bg-banner.svg") no-repeat top center;
+        background-size: 110%;
+        transition: all 1s;
+        padding: 100px 0;
+        display: flex;
+        width: 100%;
+        vertical-align: middle;
+
+        .bg {
+            background: url("../images/landing-pages/third-party-liability/tpl-text-bg-insurance.svg") no-repeat;
+            background-size: 80%;
+            background-position-x: center;
+            background-position-y: 100%;
+            width: 100%;
+            max-width: 1400px;
+            display: table;
+            margin: auto;
+            transition: all 0.5s;
+
+            img {
+                max-width: 100%;
+                transition: all 0.7s;
+                filter: grayscale(50%);
+                margin-top: 30px;
+            }
+
+            .title1 {
+                font-family: $font-family-base-700;
+                display: inline-block;
+                margin: 0 auto 24px auto;
+                transition: all 0.3s;
+            }
+
+            .row{
+                display: flow-root;
+            }
+
+        }
+
+        &:hover {
+            background-image: url("../images/landing-pages/third-party-liability/tpl-bg-banner-2.png");
+            background-size: 100%;
+            
+            .bg {
+                background-image: url("../images/landing-pages/third-party-liability/tpl-text-bg-insurance-2.png");
+                background-size: 75%;
+                background-position-y: 95%;
+
+                .title1 {
+                    font-size: 38px;
+                }
+
+                img {
+                    filter: grayscale(0%);
+                    margin-top: -30px;
+                }
+            }
+        }
+    }
+
+    .description{
+        max-width: 945px;
+        margin: -130px auto 80px auto;
+
+        p{
+            text-align: center;
+            font-size: 16px;
+            color: $gray-650;
+            margin-bottom: 30px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .insurance-types{
+        .title2{
+            margin-bottom: 10px;
+        }
+    }
+
+    .insurance-table-wrap{
+        .header{
+            max-width: 883px;
+            margin: 0 auto 75px auto;
+
+            .title1{
+                margin-bottom: 24px;
+            }
+
+            p{
+                margin-bottom: 0;
+                font-size: 16px;
+                color: $gray-650;
+            }
+        }
+    }
+}
+
+@media (max-width: 1920px) {
+    .third-party-liability-wrap {
+        .banner {
+            height: 89vh;
+            padding: 0;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .third-party-liability-wrap {
+        .banner {
+            background-size: cover;
+            height: auto;
+            padding: 50px 0;
+
+            .bg {
+                background-size: cover;
+
+                .title1 {
+                    font-size: 38px;
+                }
+
+                &:hover{
+                    background-size: cover;
+
+                    img{
+                        margin-top: 30px;
+                    }
+                }
+            }
+
+            &:hover{
+                background-size: cover;
+            }
+        }
+        .description {
+            margin-top: 0;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .third-party-liability-wrap {
+        .insurance-types{
+            img{
+                margin-bottom: 24px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .third-party-liability-wrap {
+        .banner, .banner:hover {
+            background-size: cover;
+            .bg, .bg:hover{
+                background-size: 250%;
+                background-position: center;
+
+                .title1 {
+                    font-size: 36px;
+                }
+            }
+        }
+
+        .description {
+            p{
+                font-size: 14px;
+            }
+        }
+
+        .insurance-table-wrap{
+            .title2{
+                font-size: 24px;
+            }
+        }
+
+        .insurance-table{
+            .table-col{
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+@media (max-width: 508px) {
+    .third-party-liability-wrap{
+        .insurance-table-wrap{
+            padding-bottom: 90px;
+        }
+    }
+}

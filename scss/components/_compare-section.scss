@@ -1,0 +1,218 @@
+.compare-section {
+    width: 416px;
+    position: sticky;
+    position: -webkit-sticky;
+    right: 0;
+    top: 82px;
+    bottom: 0;
+    margin-top: -66px;
+    background-color: $white;
+    display: inline-block;
+    z-index: 10;
+    box-shadow: 0px 32px 64px rgba($black, 0.16);
+
+    .header {
+        width: 100%;
+        display: inline-block;
+        padding: 24px;
+        clear: both;
+        border-bottom: 1px solid $gray-225;
+
+        .title {
+            @extend .title4;
+            max-width: 336px;
+            float: left;
+            margin-right: 10px;
+        }
+        .btn {
+            float: right;
+            padding: 0;
+        }
+    }
+
+    .body {
+        @extend .custom-scrollbar;
+        max-height: 100%;
+        overflow-x: auto;
+        width: 100%;
+        display: inline-block;
+        padding: 24px;
+        clear: both;
+        height: 57.5vh;
+
+        .title {
+            font-family: $font-family-base;
+            font-size: 14px;
+            width: 100%;
+            display: block;
+        }
+
+        .insurance-card {
+            border: 1px solid $gray-225;
+
+            .thumb{
+                width: 80px;
+                height: 80px;
+
+                img{
+                    max-height: 80px;
+                }
+            }
+
+            .text-detail{
+                height: auto;
+                overflow: initial;
+                margin-bottom: 16px;
+            }
+
+            &:hover {
+                box-shadow: 0 0 0 transparent;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .footer {
+        width: 100%;
+        display: inline-block;
+        padding: 24px;
+        clear: both;
+        border-top: 1px solid $gray-225;
+
+        .footer-text {
+            font-size: 12px;
+            color: $gray-650;
+            width: 100%;
+            display: block;
+            text-align: center;
+            margin-top: 16px;
+        }
+
+        .btn-cancel {
+            margin-right: 16px;
+        }
+    }
+}
+
+@media (max-width: 1920px), (max-height: 1080px) {
+    .compare-section {
+        .body {
+            height: 64.3vh !important;
+        }
+    }
+}
+
+@media (max-width: 1680px) and (max-height: 1050px) {
+    .compare-section {
+        .body {
+            height: 63vh !important;
+        }
+    }
+}
+
+@media (max-width: 1600px) and (max-height: 900px) {
+    .compare-section {
+        .body {
+            height: 56.3vh !important;
+        }
+    }
+}
+
+@media (max-width: 1440px) and (max-height: 900px) {
+    .compare-section {
+        .body {
+            height: 56.3vh !important;
+        }
+    }
+}
+
+@media (max-width: 1440px) {
+    .compare-section {
+        width: 330px;
+    }
+}
+
+@media (max-width: 1400px) and (max-height: 1050px) {
+    .compare-section {
+        .body {
+            height: 67.3 !important;
+        }
+    }
+}
+
+@media (max-width: 1280px) and (max-height: 1024px) {
+    .compare-section {
+        width: 100%;
+        .body {
+            height: 63vh !important;
+        }
+    }
+}
+
+@media (max-width: 1280px) and (max-height: 960px) {
+    .compare-section {
+        .body {
+            height: 59.2vh !important;
+        }
+    }
+}
+
+@media (max-width: 1152px) and (max-height: 864px) {
+    .compare-section {
+        .body {
+            height: 54vh !important;
+        }
+    }
+}
+
+@media (max-width: 1280px) and (max-height: 800px) {
+    .compare-section {
+        .body {
+            height: 50vh !important;
+        }
+    }
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+    .compare-section {
+        .body {
+            height: 47.4vh !important;
+        }
+    }
+}
+
+@media (max-width: 1280px) and (max-height: 768px) {
+    .compare-section {
+        .body {
+            height: 55.3vh !important;
+        }
+    }
+}
+
+@media (max-width: 1024px) and (max-height: 768px) {
+    .compare-section {
+        .body {
+            height: 47.3vh !important;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .compare-section-col {
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    .compare-section {
+        position: fixed;
+        top: auto;
+        width: 100%;
+        .header,
+        .body {
+            display: none;
+        }
+    }
+}

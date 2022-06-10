@@ -1,0 +1,41 @@
+.app-store {
+  background-image: url("../images/home.svg");
+  background-size: 2018px;
+  background-position-y: -224px;
+  height: 48px;
+  display: inline-block;
+  &.apple {
+    background-position-x: 16.2%;
+    width: 143.6px;
+  }
+  &.play {
+    background-position-x: 24.1%;
+    width: 162px;
+  }
+}
+
+.download-app {
+  width: auto;
+  display: inline-block;
+  clear: both;
+  .app-store {
+    float: left;
+    clear: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &:hover {
+    .apple,
+    .play {
+      opacity: 50%;
+      &:hover {
+        opacity: 100%;
+      }
+    }
+  }
+}
